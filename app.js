@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 
 const app = express();
 
@@ -11,9 +10,6 @@ app.get('/login', (req, res) => {
   res.send('Login');
 });
 
-app.listen(3000, () => {
-  console.log(
-    'Bien ahi genio iniciaste el servidor en la direccion ',
-    'http://localhost:3000'
-  );
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Bien ahi genio iniciaste el servidor en la direccion ');
 });
